@@ -29,8 +29,9 @@ public class Program
 
         logger = loggerFactory.CreateLogger("");
         Program program = new Program();
-        program.Test();
-
+        // program.Pack();
+        program.Push();
+        // program.Pull();
         logger.LogInformation("结束");
         Console.Read();
 
@@ -39,7 +40,7 @@ public class Program
 
     }
 
-    public void Test()
+    public void Pack()
     {
         Task.Run(() =>
         {
@@ -48,7 +49,23 @@ public class Program
         });
     }
 
+    public void Push()
+    {
+        Task.Run(() =>
+        {
+            Tcp tcp = new Tcp();
+            tcp.Push(numConnections, receiveBufferSize, overtime, port);
+        });
+    }
 
+    public void Pull()
+    {
+        Task.Run(() =>
+        {
+            Tcp tcp = new Tcp();
+            tcp.Pull(numConnections, receiveBufferSize, overtime, port);
+        });
+    }
 
 }
 
