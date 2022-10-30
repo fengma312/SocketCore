@@ -8,7 +8,6 @@
 
     <Title>SocketCore</Title>
     <Version>1.0.15</Version>    
-    <PackageProjectUrl>https://github.com/fengma312/SocketCore</PackageProjectUrl>
     <RepositoryUrl>https://github.com/fengma312/SocketCore</RepositoryUrl>
     <PackageTags>websocket;tcp;udp;SocketCore;</PackageTags>
     <Description>tcp,udp,websocket服务端和客户端框架</Description>
