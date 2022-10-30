@@ -12,7 +12,7 @@ namespace TestClient;
 
 public class Udp
 {
-    public void UdpClient()
+    public void UdpClient(string ip, int port)
     {
         UdpClients udpclient = new UdpClients(1024);
         udpclient.OnReceive += (byte[] arg2, int arg3, int arg4) =>
@@ -24,7 +24,7 @@ public class Udp
         {
             Console.WriteLine("客户端发送长度：" + arg2);
         };
-        udpclient.Start("127.0.0.1", 6666);
+        udpclient.Start(ip, port);
 
     }
 }

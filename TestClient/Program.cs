@@ -30,6 +30,8 @@ public class Program
         // program.Pack();
         program.Push();
         // program.Pull();
+        // program.Udp();
+        // program.Web();
         logger.LogInformation("结束");
         Console.Read();
 
@@ -62,6 +64,24 @@ public class Program
         {
             Tcp tcp = new Tcp();
             tcp.Pull(receiveBufferSize, ip, port);
+        });
+    }
+
+    public void Udp()
+    {
+        Task.Run(() =>
+        {
+            Udp tcp = new Udp();
+            tcp.UdpClient(ip, port);
+        });
+    }
+
+    public void Web()
+    {
+        Task.Run(() =>
+        {
+            Web tcp = new Web();
+            tcp.WebClient("ws://127.0.0.1:5555");
         });
     }
 

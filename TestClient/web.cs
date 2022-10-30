@@ -12,9 +12,9 @@ namespace TestClient;
 
 public class Web
 {
-    public void WebClient()
+    public void WebClient(string url)
     {
-        WebClients udpclient = new WebClients("127.0.0.1");
+        WebClients udpclient = new WebClients(url);
         udpclient.OnOpen += () =>
         {
             Console.WriteLine("客户端接收长度：");
