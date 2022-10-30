@@ -10,8 +10,7 @@
     <AssemblyVersion>1.0.15</AssemblyVersion>
     <FileVersion>1.0.15</FileVersion>
     <PackageProjectUrl>https://github.com/fengma312/SocketCore</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/fengma312/SocketCore</RepositoryUrl>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/fengma312/SocketCore</RepositoryUrl>   
     <PackageTags>websocket;tcp;udp;SocketCore;</PackageTags>
     <Description>tcp,udp,websocket服务端和客户端框架</Description>
   </PropertyGroup>
