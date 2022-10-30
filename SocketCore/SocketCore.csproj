@@ -13,8 +13,9 @@
 
     <Title>SocketCore</Title>
     <PackageTags>websocket;tcp;udp;SocketCore;</PackageTags>
-    <Repository type="git" url="https://github.com/fengma312/SocketCore" branch="dev" commit="b81ed7052c584dc83627639b7a1d8a660e3ef02d"></Repository>
-
+    <metadata>
+      <repository type="git" url="https://github.com/fengma312/SocketCore" branch="dev" commit="b81ed7052c584dc83627639b7a1d8a660e3ef02d"/>
+    </metadata>
   </PropertyGroup>
 
   <ItemGroup>
