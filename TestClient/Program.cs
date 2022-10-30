@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using test.client;
 
 namespace Console.ExampleFormatters.Simple;
 
@@ -21,5 +22,6 @@ class Program
             logger.LogInformation("Logs contain timestamp and log level.");
             logger.LogInformation("Each log message is fit in a single line.");
         }
+
     }
 }

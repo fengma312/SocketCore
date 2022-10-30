@@ -7,7 +7,7 @@ using SocketCore.Server;
 
 namespace test.client;
 
-public class tcp
+public class Tcp
 {
     /// <summary>
     /// 设置基本配置
