@@ -1,14 +1,23 @@
-﻿using Microsoft.Extensions.Logging;
-using test.client;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
-namespace Console.ExampleFormatters.Simple;
 
-class Program
+namespace TestClient;
+
+public class Program
 {
-    static void Main()
+    public static ILogger logger = null!;
+    int port = 5555;
+    int receiveBufferSize = 1024;
+    string ip = "127.0.0.1";
+
+
+    static void Main(string[] args)
     {
         using ILoggerFactory loggerFactory =
-            LoggerFactory.Create(builder =>
+           LoggerFactory.Create(builder =>
                 builder.AddSimpleConsole(options =>
                 {
                     options.IncludeScopes = true;
@@ -16,12 +25,49 @@ class Program
                     options.TimestampFormat = "hh:mm:ss ";
                 }));
 
-        ILogger<Program> logger = loggerFactory.CreateLogger<Program>();
-        using (logger.BeginScope("[scope is enabled]"))
-        {
-            logger.LogInformation("Logs contain timestamp and log level.");
-            logger.LogInformation("Each log message is fit in a single line.");
-        }
+        logger = loggerFactory.CreateLogger("");
+        Program program = new Program();
+        // program.Pack();
+        program.Push();
+        // program.Pull();
+        logger.LogInformation("结束");
+        Console.Read();
+
+
+
 
     }
+
+    public void Pack()
+    {
+        Task.Run(() =>
+        {
+            Tcp tcp = new Tcp();
+            tcp.Pack(receiveBufferSize, ip, port, 0xff);
+        });
+    }
+
+    public void Push()
+    {
+        Task.Run(() =>
+        {
+            Tcp tcp = new Tcp();
+            tcp.Push(receiveBufferSize, ip, port);
+        });
+    }
+
+    public void Pull()
+    {
+        Task.Run(() =>
+        {
+            Tcp tcp = new Tcp();
+            tcp.Pull(receiveBufferSize, ip, port);
+        });
+    }
+
 }
+
+
+
+
+

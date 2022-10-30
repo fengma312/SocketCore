@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SocketCore.Server;
 
-namespace test.client;
+namespace TestServer;
 
 public class Tcp
 {
