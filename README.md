@@ -1,12 +1,12 @@
-socket.core
+SocketCore
 这是一个基于C# .net standard2.0 写的socket框架，可使用于.net Framework/dotnet core程序集，能在window(IOCP)/linux(epoll)运行.使用异步连接，异步发送，异步接收，性能爆表，并且通过压力测试。
-安装NuGet: https://www.nuget.org/packages/socket.core/
+安装NuGet: https://www.nuget.org/packages/SocketCore/
 
 
 一：TCP模块介绍
 
-服务端所在socket.core.Server命名空间下，分别为三种模式 push/pull/pack
-客户端所在socket.core.Client命名空间下，分别为三种模式 push/pull/pack
+服务端所在SocketCore.Server命名空间下，分别为三种模式 push/pull/pack
+客户端所在SocketCore.Client命名空间下，分别为三种模式 push/pull/pack
 
 主要流程与对应的方法和事件介绍.
 注:connectId(int)代表着一个连接对象,data(byte[]),success(bool)
@@ -74,8 +74,8 @@ T GetAttached(int connectId)
 
 1.初始化UDP实现类UdpServer/UdpClients
 
-服务端socket.core.Server.UdpServer
-客户端socket.core.Client.UdpClients
+服务端SocketCore.Server.UdpServer
+客户端SocketCore.Client.UdpClients
 参数int receiveBufferSize用于每个套接字I/O操作的缓冲区大小(接收端)
 
 2.发送数据
