@@ -6,14 +6,18 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
-    <PackageId>SocketCore</PackageId>
-    <Version>1.0.1</Version>
+    <PackageId>Socket.Core</PackageId>
+    <Title>SocketCore</Title>
+    <Version>1.0.15</Version>
+    <Copyright>fengma_312@163.com</Copyright>
+    <PackageVersion>1.0.15</PackageVersion>
     <Authors>fengma_312@163.com</Authors>
     <Company>Authors</Company>
     <Product>SocketCore</Product>
     <PackageTags>websocket;tcp;udp;SocketCore;</PackageTags>
     <Description>tcp,udp,websocket服务端和客户端框架</Description>
-
+    <RespositoryType>git</RespositoryType>
+    <RepositoryUrl>https://github.com/fengma312/SocketCore</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
