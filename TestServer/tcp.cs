@@ -22,13 +22,13 @@ public class Tcp
         TcpPackServer server = new TcpPackServer(numConnections, receiveBufferSize, overtime, headerFlag);
         server.OnAccept += (int obj) =>
         {
-            //server.SetAttached(obj, 555);
-            //Console.WriteLine($"Pack已连接{obj}");
+            server.SetAttached(obj, 555);
+            Console.WriteLine($"Pack已连接{obj}");
         };
         server.OnReceive += (int arg1, byte[] arg2) =>
         {
-            //int aaa = server.GetAttached<int>(arg1);
-            //Console.WriteLine($"Pack已接收:{arg1} 长度:{arg2.Length}");          
+            int aaa = server.GetAttached<int>(arg1);
+            Console.WriteLine($"Pack已接收:{arg1} 长度:{arg2.Length}");          
             server.Send(arg1, arg2, 0, arg2.Length);
         };
         server.OnSend += (int arg1, int arg2) =>
@@ -37,8 +37,8 @@ public class Tcp
         };
         server.OnClose += (int obj) =>
         {
-            //int aaa = server.GetAttached<int>(obj);
-            //Console.WriteLine($"Pack断开{obj}");
+            int aaa = server.GetAttached<int>(obj);
+            Console.WriteLine($"Pack断开{obj}");
         };
         server.Start(port);
 
