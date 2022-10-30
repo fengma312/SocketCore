@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
-    <Title>Socket.Core</Title>
+    <Title>SocketCore</Title>
     <Version>1.0.15</Version>
     <RepositoryUrl>https://github.com/fengma312/SocketCore</RepositoryUrl>
     <PackageTags>websocket;tcp;udp;SocketCore;</PackageTags>
