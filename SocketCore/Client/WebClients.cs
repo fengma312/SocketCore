@@ -106,7 +106,7 @@ public class WebClients
     {
         _ = Task.Run(async () =>
         {
-            for (int i = 0; i < this.auto_connect; i++)
+            for (int i = 1; i <= this.auto_connect; i++)
             {
                 try
                 {
@@ -140,7 +140,7 @@ public class WebClients
                     this.logger.LogError(this.event_id, ex, $"url:{this.url},websocket连接失败!");
                     this.OnError?.Invoke(ex);
                 }
-                await Task.Delay((i + 1) * 1000 * 5);
+                await Task.Delay(i * 1000 * 5);
             }
         });
         await Task.Delay(10);
