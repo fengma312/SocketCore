@@ -9,9 +9,9 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageId>Socket.Core</PackageId>
     <Title>SocketCore</Title>
-    <Version>1.0.15</Version>
+    <Version>1.0.16</Version>
     <Copyright>fengma_312@163.com</Copyright>
-    <PackageVersion>1.0.15</PackageVersion>
+    <PackageVersion>1.0.16</PackageVersion>
     <Authors>fengma_312@163.com</Authors>
     <Company>Authors</Company>
     <Product>SocketCore</Product>
