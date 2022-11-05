@@ -29,7 +29,7 @@ public class WebServer
     /// <returns></returns>
     public ConcurrentDictionary<int, WebSocket> server = new ConcurrentDictionary<int, WebSocket>();
     /// <summary>
-    /// 连接标示 自增长
+    /// 客户id
     /// </summary>
     private volatile int connectId;
     /// <summary>
