@@ -31,7 +31,7 @@ public class WebServer
     /// <summary>
     /// 客户id
     /// </summary>
-    private volatile int connectId;
+    private int connectId;
     /// <summary>
     /// 断开事件
     /// </summary>
