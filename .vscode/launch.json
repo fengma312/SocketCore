@@ -32,6 +32,26 @@
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
+        },
+        {
+            "name": "api",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build_Api",
+            "program": "${workspaceFolder}/TestApi/bin/Debug/net6.0/TestApi.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/TestApi",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
         }
     ]
 }
