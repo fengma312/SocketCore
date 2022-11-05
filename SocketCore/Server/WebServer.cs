@@ -60,7 +60,7 @@ public class WebServer
     /// <param name="connectId">客户id</param>
     /// <param name="data">发送数据</param>
     /// <param name="message_type">发送数据类型</param>
-    /// <returns>是否已发送returns>
+    /// <returns>是否已发送</returns>
     public async Task<bool> Send(int connectId, byte[] data, WebSocketMessageType message_type = WebSocketMessageType.Text)
     {
         if (server.TryGetValue(connectId, out WebSocket? websocket))
