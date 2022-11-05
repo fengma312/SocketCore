@@ -87,7 +87,7 @@ public class WebClients
     /// </summary>
     /// <param name="data">发送数据</param>
     /// <param name="message_type">发送数据类型</param>
-    /// <returns>是否已发送(注:不确保发送成功)</returns>
+    /// <returns>是否已发送</returns>
     public async Task<bool> Send(byte[] data, WebSocketMessageType message_type = WebSocketMessageType.Text)
     {
         if (websocket.State == WebSocketState.Open)
