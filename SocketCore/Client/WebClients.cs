@@ -104,7 +104,7 @@ public class WebClients
     /// <returns></returns>
     private async Task Handle()
     {
-        _ = Task.Run(async () =>
+        new Thread(async () =>
         {
             for (int i = 1; i <= this.auto_connect; i++)
             {
@@ -142,7 +142,11 @@ public class WebClients
                 }
                 await Task.Delay(i * 1000 * 5);
             }
-        });
+        })
+        {
+            IsBackground = true,
+            Priority = ThreadPriority.Highest,
+        }.Start();
         await Task.Delay(10);
     }
 
